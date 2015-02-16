@@ -1,4 +1,3 @@
-/** @jsx React.DOM */
 "use strict";
 
 var React = require('react');
@@ -26,7 +25,7 @@ var ContainerMixin = {
   },
 
   renderContainer: function() {
-    return <div ref="container" />;
+    return React.createElement("div", {ref: "container"});
   }
 };
 

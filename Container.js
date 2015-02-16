@@ -1,4 +1,3 @@
-/** @jsx React.DOM */
 "use strict";
 
 var React = require('react');
@@ -12,12 +11,11 @@ var Container = React.createClass({
     // @see https://gist.github.com/sebmarkbage/a6e220b7097eb3c79ab7
     // return <div {...this.props}>{this.props.children}{this.renderContainer()}</div>;
     return this.transferPropsTo(
-      <div>
-        {this.props.children}
-
-        {this.renderContainer()}
-      </div>
-      );
+      React.createElement(div, null,
+        this.props.children,
+        this.renderContainer()
+      )
+    );
   }
 });
 

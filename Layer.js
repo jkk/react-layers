@@ -1,5 +1,3 @@
-/** @jsx React.DOM */
-
 "use strict";
 
 var React = require('react');
@@ -18,7 +16,7 @@ var Layer = React.createClass({
     // @see https://gist.github.com/sebmarkbage/a6e220b7097eb3c79ab7
     // var {container, layer, ...props} = this.props;
     // return <div {...props}>{this.props.children}</div>;
-    return this.transferPropsTo(<div container={null} layer={null}>{this.props.children}</div>);
+    return this.transferPropsTo(React.createElement("div", {container: null, layer: null}, this.props.children));
   },
 
   renderLayer: function() {

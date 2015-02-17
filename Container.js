@@ -11,7 +11,7 @@ var Container = React.createClass({
     // @see https://gist.github.com/sebmarkbage/a6e220b7097eb3c79ab7
     // return <div {...this.props}>{this.props.children}{this.renderContainer()}</div>;
     return this.transferPropsTo(
-      React.createElement(div, null,
+      React.createElement("div", null,
         this.props.children,
         this.renderContainer()
       )
